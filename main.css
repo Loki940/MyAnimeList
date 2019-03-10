@@ -1,0 +1,277 @@
+.status-menu:after {
+	background-image: url(https://i.imgur.com/E7xt6Sp.png);
+}
+#cover-image-container:after {
+	content: "Loki940's\a       Reading List";
+}
+
+.cover-block {
+	background-image: url(https://i.imgur.com/UV2kaRr.png) !important;
+}
+
+#cover-image-container {
+	background-image: none !important;
+}
+
+/* Horizontal Tags */
+
+.list-table-data {
+	padding-bottom: 11px;
+}
+
+.data.tags {
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	display: -webkit-flex !important;
+	display: -moz-flex !important;
+	display: flex !important;
+	width: 0;
+	height: 100%;
+	padding: 0 !important;
+	
+	-webkit-align-items: flex-end;
+	-moz-align-items: flex-end;
+	align-items: flex-end;
+}
+.data.tags div {
+	max-width: 980px;
+	margin: 0 0 4px 80px;
+	
+	font-size: 0;
+	white-space: nowrap;
+}
+.data.tags span {
+	display: inline-block;
+	
+	padding: 0;
+}
+.data.tags span a {
+	padding: 1px 8px !important;
+	margin-right: 4px;
+	white-space: nowrap;
+	color: white !important;
+}
+.data.tags span a[href*="\=Favo"] {
+	padding: 0 !important;
+}
+
+/* Tag Grouping */
+
+.data.tags a.edit { right: -1060px; }
+.data.tags textarea { right: -1060px; }
+
+.data.tags span a[href*="\="] {color: white !important;}
+
+.data.tags span a[href*="\=Own"],
+.data.tags span a[href*="\=Scan"],
+.data.tags span a[href*="\=Paper"],
+.data.tags span a[href*="\=Digit"],
+.data.tags span a[href*="\=18"],
+.data.tags span a[href*="\=Ecchi"],
+.data.tags span a[href*="\=All"],
+.data.tags span a[href*="\=%3F"]
+{
+	padding: 1px 0 !important;
+	width: 50px;
+	color: #262626 !important;
+	background: #bfbfbf;
+}
+.data.tags span a[href*="\=Own"],
+.data.tags span a[href*="\=Scan"] {
+	border-radius: 8.5px 0 0 8.5px;
+	margin-right: 2px;
+}
+	
+.data.tags span a[href*="\=Paper"],
+.data.tags span a[href*="\=Digit"] {
+	border-radius: 0;
+	margin-right: 2px;
+}
+	
+.data.tags span a[href*="\=18"],
+.data.tags span a[href*="\=Ecchi"],
+.data.tags span a[href*="\=All"],
+.data.tags span a[href*="\=%3F"]{
+	border-radius: 0 8.5px 8.5px 0;
+}
+
+/* Tag Descriptions Basis - Horizontal */
+
+.data.tags span a { position: relative; }
+.data.tags span a:not([href*="\=Favo"]):after, .data.tags span a:not([href*="\=Favo"]):before {
+	position: absolute;
+	
+	display: block;
+	
+	-webkit-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+	pointer-events: none;
+	opacity: 0;
+	z-index: 1;
+}
+.data.tags span a:not([href*="\=Favo"]):after {
+	top: 27px;
+	left: -25px;
+	
+	width: 340px;
+	height: auto;
+	padding: 4px 8px;
+	background: #191919;
+	border: 1px solid #777;
+	border-radius: 4px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	color: #ababab;
+	font: 11px/15px Arial, Verdana;
+	text-align: left;
+	white-space: pre-wrap;
+}
+.data.tags span a:not([href*="\=Favo"]):before {
+	content: "";
+	top: 17px;
+	left: 50%;
+	
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #777 transparent;
+	margin-left: -10px;
+}
+.data.tags span a:hover:after {
+	left: -20px;
+	
+	opacity: 1;
+}
+.data.tags span a:not([href*="\=Favo"]):hover:before {
+	margin-left: -5px;
+	
+	opacity: 1;
+}
+
+.data.tags span:nth-child(n+5) a:not([href*="\=Favo"]):after { left: -105px; }
+.data.tags span:nth-child(n+5) a:hover:after { left: -100px; }
+
+.data.tags span:nth-child(n+8) a:not([href*="\=Favo"]):after { left: auto; right: -115px; }
+.data.tags span:nth-child(n+8) a:hover:after { right: -100px; }
+
+.data.tags span:nth-child(n+11) a:not([href*="\=Favo"]):after { right: -15px; }
+.data.tags span:nth-child(n+11) a:hover:after { right: -20px; }
+
+/* Tag Coloring */
+
+.data.tags span a[href*="\=18"] 
+{
+	color: #800000 !important;
+}
+	
+.data.tags span a[href*="\=18"]:hover
+{
+  background: #4d0000 !important;
+  color: white !important;
+}
+
+  
+.data.tags span a[href*="\=Isekai"],
+.data.tags span a[href*="\=Fantasy"],
+.data.tags span a[href*="\=Supernatural"] {
+  background: #600080 !important;
+}
+  
+.data.tags span a[href*="\=Isekai"]:hover,
+.data.tags span a[href*="\=Fantasy"]:hover,
+.data.tags span a[href*="\=Supernatural"]:hover {
+  background: #39004d !important;
+  color: white !important;
+}
+
+.data.tags span a[href*="\=Romance"]
+{
+  background: #cc0066 !important;
+}
+
+.data.tags span a[href*="\=Romance"]:hover
+{
+  background: #800040 !important;
+  color: white !important;
+}
+
+.data.tags span a[href*="\=Web%20Novel"]
+{
+  background: #00aaff !important;
+}
+
+.data.tags span a[href*="\=Web%20Novel"]:hover
+{
+  background: #0077b3 !important;
+  color: white !important;
+}
+
+.data.tags span a[href*="\=Light%20Novel"]
+{
+  background: #005580 !important;
+}
+
+.data.tags span a[href*="\=Light%20Novel"]:hover
+{
+  background: #002233 !important;
+  color: white !important;
+}
+
+.data.tags span a[href*="\=Untranslated"]
+{
+  background: #bfbfbf !important;
+  color: black !important;
+}
+
+.data.tags span a[href*="\=Untranslated"]:hover
+{
+  background: #999999 !important;
+  color: black !important;
+}
+
+/* Tag Description */
+
+.data.tags a[href*="\=All"]:after {
+	content: "Rating - For Everyone (All)\a—————————————————————————————\a Nothing too shocking here, everyone should be able to read it with no problems."
+}
+
+.data.tags a[href*="\=Ecchi"]:after {
+	content: "Rating - Ecchi \a—————————————————————————————\a May countain suggestive scenes and/or nudity. \a Mostly fanservice."
+}
+
+.data.tags a[href*="\=18"]:after {
+	content: "Rating - Adult (18+)\a—————————————————————————————\a Sexual and/or Gore content. \a This is certainly not safe for work."
+}
+
+.data.tags a[href*="\=%3F"]:after {
+  content: "?\a—————————————————————————————\a Not yet defined.";
+}
+
+.data.tags a[href*="\=Isekai"]:after {
+	content: "Setting - Isekai \a—————————————————————————————\a The main character(s) have been reincarnated or summoned to another world."
+}
+
+.data.tags a[href*="\=Supernatural"]:after {
+	content: "Setting - Supernatural \a—————————————————————————————\a The story is happening in our earth, and includes supernatural powers, races or magic."
+}
+
+.data.tags a[href*="\=Fantasy"]:after {
+	content: "Setting - Fantasy \a—————————————————————————————\a The story is happening in another world and the main character(s) is native to it."
+}
+.data.tags a[href*="\=Romance"]:after {
+	content: "Romance \a—————————————————————————————\a The main character and at least one girl share romantic feelings for each other. \a No one-sided love."
+}
+.data.tags a[href*="\=Web%20Novel"]:after
+{
+  content: "Web Novel \a—————————————————————————————\a I'm reading the Web Novel. If Light Novel tag is also present, I'm reading both version.";
+}
+.data.tags a[href*="\=Light%20Novel"]:after
+{
+  content: "Light Novel \a—————————————————————————————\a I'm reading the Light Novel. If Web Novel tag is also present, I'm reading both version.";
+}
+.data.tags a[href*="\=Untranslated"]:after
+{
+  content: "Untranslated \a—————————————————————————————\a The translation for this novel has either been dropped, or has not started. I consider it dropped if it didn't receive any update over the 4 last months.";
+}
