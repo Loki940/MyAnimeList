@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 .status-menu:after {
 	background-image: url(https://i.imgur.com/E7xt6Sp.png);
 }
@@ -62,12 +64,11 @@
 .data.tags a.edit { right: -1060px; }
 .data.tags textarea { right: -1060px; }
 
-.data.tags span a[href*="\="] {color: white !important;}
+.data.tags span a[href*="\="] {color: white !important; font-family: Quicksand;}
 
-.data.tags span a[href*="\=Own"],
-.data.tags span a[href*="\=Scan"],
-.data.tags span a[href*="\=Paper"],
-.data.tags span a[href*="\=Digit"],
+.data.tags span a[href*="\=LN"],
+.data.tags span a[href*="\=WN"],
+.data.tags span a[href*="\=LN%2FWN"],
 .data.tags span a[href*="\=18"],
 .data.tags span a[href*="\=Ecchi"],
 .data.tags span a[href*="\=All"],
@@ -77,17 +78,14 @@
 	width: 50px;
 	color: #262626 !important;
 	background: #bfbfbf;
+	border: 0.5px solid #b3b3b3;
 }
-.data.tags span a[href*="\=Own"],
-.data.tags span a[href*="\=Scan"] {
-	border-radius: 8.5px 0 0 8.5px;
-	margin-right: 2px;
-}
-	
-.data.tags span a[href*="\=Paper"],
-.data.tags span a[href*="\=Digit"] {
-	border-radius: 0;
-	margin-right: 2px;
+
+.data.tags span a[href*="\=LN"],
+.data.tags span a[href*="\=WN"],
+.data.tags span a[href*="\=LN%2FWN"] {
+	border-radius: 2px 0 0 2px;
+	margin-right: -1px;
 }
 	
 .data.tags span a[href*="\=18"],
@@ -263,15 +261,15 @@
 .data.tags a[href*="\=Romance"]:after {
 	content: "Romance \a—————————————————————————————\a The main character and at least one girl share romantic feelings for each other. \a No one-sided love."
 }
-.data.tags a[href*="\=Web%20Novel"]:after
+.data.tags a[href*="\=WN"]:after
 {
   content: "Web Novel \a—————————————————————————————\a I'm reading the Web Novel. If Light Novel tag is also present, I'm reading both version.";
 }
-.data.tags a[href*="\=Light%20Novel"]:after
+.data.tags a[href*="\=LN"]:after
 {
   content: "Light Novel \a—————————————————————————————\a I'm reading the Light Novel. If Web Novel tag is also present, I'm reading both version.";
 }
-.data.tags a[href*="\=Untranslated"]:after
+.data.tags a[href*="\=UNT"]:after
 {
   content: "Untranslated \a—————————————————————————————\a The translation for this novel has either been dropped, or has not started. I consider it dropped if it didn't receive any update over the 4 last months.";
 }
