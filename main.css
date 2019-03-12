@@ -77,8 +77,8 @@
 	padding: 1px 0 !important;
 	width: 50px;
 	color: #262626 !important;
-	background: #bfbfbf;
-	border: 0.5px solid #b3b3b3;
+	background: #e6e6e6;
+	border: 0.5px solid #d9d9d9;
 }
 
 .data.tags span a[href*="\=LN"],
@@ -92,7 +92,7 @@
 .data.tags span a[href*="\=Ecchi"],
 .data.tags span a[href*="\=All"],
 .data.tags span a[href*="\=%3F"]{
-	border-radius: 0 8.5px 8.5px 0;
+	border-radius: 0 2px 2px 0;
 }
 
 /* Tag Descriptions Basis - Horizontal */
