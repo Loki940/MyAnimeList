@@ -73,7 +73,7 @@
          --bg-dark: #ddd;
             --text: #323232;
           --text-h: #787878;
-        --text-dim: #bababa;
+        --text-dim: #323232;
       --text-dim-h: #646464;
        --text-dark: #111;
             --icon: #323232;
@@ -1425,10 +1425,12 @@ a, a:hover {
 	width: 26px;
 	height: 26px;
 	background: var(--btn-bg);
-	border-radius: 13px;
+	border-radius: 0 8px 0 8px;
 	margin: 0 0 0 auto;
 	
 	line-height: 26px;
+	font-family: Quicksand;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
 .list-table .list-table-data .score a:not(.edit-disabled):hover {
@@ -1471,8 +1473,16 @@ a, a:hover {
 	order: 15;
 }
 
-.data.chapter { margin-top: -34px; }
-.data.volume { margin: 34px 0 0 -92px; }
+.data.chapter { z-index: 2 !important; margin: 0px -1px 0 10px; border-radius: 0px 0px 0px 12px; padding-right: 50px !important;box-shadow: 2px 2px 2px rgba(0,0,0,0.3); }
+.data.volume { z-index: 5 !important; margin-top: 0px; border-radius: 0px 12px 0px 0px;box-shadow: 2px 2px 2px rgba(0,0,0,0.3); }
+
+.data.chapter, .data.volume {
+	padding: 2px !important;
+	color: #262626 !important;
+	background: #e6e6e6;
+	border: 0.5px solid #d9d9d9;
+	font-family: Quicksand;
+}
 
 .data.progress span, .data.chapter span, .data.volume span { color: var(--text); }
 
