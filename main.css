@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+--fontc: #953697;
+	
 .status-menu:after {
 	background-image: url(https://i.imgur.com/E7xt6Sp.png);
 }
@@ -17,14 +19,10 @@
 
 /* Horizontal Tags */
 
-.list-table-data {
-	padding-bottom: 11px;
-}
-
 .data.tags {
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: 69px;
+  bottom: 7px;
 	
 	display: -webkit-flex !important;
 	display: -moz-flex !important;
@@ -64,35 +62,34 @@
 .data.tags a.edit { right: -1060px; }
 .data.tags textarea { right: -1060px; }
 
-.data.tags span a[href*="\="] {color: white !important; font-family: Quicksand;}
+.data.tags span a[href*="\="] {color: white !important; font-family: Quicksand; border-radius: 0 8px 0 8px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.6); }
+.data.tags span a[href*="\=18"], .data.tags span a[href*="\=Ecchi"], .data.tags span a[href*="\=Safe"], .data.tags span a[href*="\=%3F"] {border-radius: 8px 0 8px 0;}
+.data.tags span a[href*="\=Light"],.data.tags span a[href*="\=Web"], .data.tags span a[href*="\=Untranslated"] {border-radius: 8px 8px 0 0;}
 
-.data.tags span a[href*="\=LN"],
-.data.tags span a[href*="\=WN"],
-.data.tags span a[href*="\=LN%2FWN"],
+.data.tags span a[href*="\=Light"],
+.data.tags span a[href*="\=Web"],
+.data.tags span a[href*="\=Untranslated"],
 .data.tags span a[href*="\=18"],
 .data.tags span a[href*="\=Ecchi"],
-.data.tags span a[href*="\=All"],
+.data.tags span a[href*="\=Safe"],
 .data.tags span a[href*="\=%3F"]
 {
 	padding: 1px 0 !important;
 	width: 50px;
 	color: #262626 !important;
-	background: #e6e6e6;
-	border: 0.5px solid #d9d9d9;
+	background: var(--bgs) !important;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .data.tags span a[href*="\=LN"],
 .data.tags span a[href*="\=WN"],
 .data.tags span a[href*="\=LN%2FWN"] {
-	border-radius: 2px 0 0 2px;
 	margin-right: -1px;
 }
-	
 .data.tags span a[href*="\=18"],
 .data.tags span a[href*="\=Ecchi"],
 .data.tags span a[href*="\=All"],
 .data.tags span a[href*="\=%3F"]{
-	border-radius: 0 2px 2px 0;
 }
 
 /* Tag Descriptions Basis - Horizontal */
@@ -231,8 +228,8 @@
 
 /* Tag Description */
 
-.data.tags a[href*="\=All"]:after {
-	content: "Rating - For Everyone (All)\a—————————————————————————————\a Nothing too shocking here, everyone should be able to read it with no problems."
+.data.tags a[href*="\=Safe"]:after {
+	content: "Rating - For Everyone (Safe)\a—————————————————————————————\a Nothing too shocking here, everyone should be able to read it with no problems."
 }
 
 .data.tags a[href*="\=Ecchi"]:after {
@@ -261,15 +258,15 @@
 .data.tags a[href*="\=Romance"]:after {
 	content: "Romance \a—————————————————————————————\a The main character and at least one girl share romantic feelings for each other. \a No one-sided love."
 }
-.data.tags a[href*="\=WN"]:after
+.data.tags a[href*="\=Web"]:after
 {
   content: "Web Novel \a—————————————————————————————\a I'm reading the Web Novel. If Light Novel tag is also present, I'm reading both version.";
 }
-.data.tags a[href*="\=LN"]:after
+.data.tags a[href*="\=Light"]:after
 {
   content: "Light Novel \a—————————————————————————————\a I'm reading the Light Novel. If Web Novel tag is also present, I'm reading both version.";
 }
-.data.tags a[href*="\=UNT"]:after
+.data.tags a[href*="\=Untranslated"]:after
 {
   content: "Untranslated \a—————————————————————————————\a The translation for this novel has either been dropped, or has not started. I consider it dropped if it didn't receive any update over the 4 last months.";
 }
