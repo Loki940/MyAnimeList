@@ -1345,12 +1345,13 @@ a, a:hover {
 	flex: 1 0 auto;
 	
 	line-height: 16px;
+	left: 100px;
+	top: -12px;
 }
 
 .data.title .link.sort {
 	position: absolute;
-	top: -12px;
-	left: 112px;
+	left: 12px;
 	
 	display: inline-block;
 	max-width: 100%;
@@ -1380,8 +1381,8 @@ a, a:hover {
 	color: var(--text-dim) !important;
 	font-size: 9px !important;
 	position: absolute;
-	top: -26px;
-	right: -170px;
+	top: -14px;
+	right: -70px;
 	padding: 0px 16px 0px 16px;
 	border-radius: 6px 0 6px 0;
 	color: #262626 !important;
