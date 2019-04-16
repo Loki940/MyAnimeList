@@ -68,7 +68,6 @@
 
 .data.tags span a[href*="\=Light"],
 .data.tags span a[href*="\=Web"],
-.data.tags span a[href*="\=Untranslated"],
 .data.tags span a[href*="\=18"],
 .data.tags span a[href*="\=Ecchi"],
 .data.tags span a[href*="\=Safe"],
@@ -156,6 +155,11 @@
 
 /* Tag Coloring */
 
+.data.tags span a:hover {
+	background: var(--btn-bg-h) !important;
+	color: var(--btn-text-h) !important;
+}
+
 .data.tags span a[href*="\=18"] 
 {
 	color: #800000 !important;
@@ -163,67 +167,76 @@
 	
 .data.tags span a[href*="\=18"]:hover
 {
-  background: #4d0000 !important;
-  color: white !important;
+	background: #4d0000 !important;
+	color: white !important;
 }
 
-  
+.data.tags span a[href*="\=Untranslated"]
+`{
+	background: #545454 !important;
+	color: #e2cd41 !important;
+}
+
 .data.tags span a[href*="\=Isekai"],
 .data.tags span a[href*="\=Fantasy"],
-.data.tags span a[href*="\=Supernatural"] {
-  background: #600080 !important;
+.data.tags span a[href*="\=Supernatural"],
+.data.tags span a[href*="\=Sci-Fi"]
+{
+	background: #600080 !important;
 }
   
 .data.tags span a[href*="\=Isekai"]:hover,
 .data.tags span a[href*="\=Fantasy"]:hover,
-.data.tags span a[href*="\=Supernatural"]:hover {
-  background: #39004d !important;
-  color: white !important;
+.data.tags span a[href*="\=Supernatural"]:hover,
+.data.tags span a[href*="\=Sci-Fi"]:hover 
+{
+	background: #39004d !important;
+	color: white !important;
 }
 
 .data.tags span a[href*="\=Romance"]
 {
-  background: #cc0066 !important;
+	background: #cc0066 !important;
 }
 
 .data.tags span a[href*="\=Romance"]:hover
 {
-  background: #800040 !important;
-  color: white !important;
+	background: #800040 !important;
+	color: white !important;
 }
 
 .data.tags span a[href*="\=Web%20Novel"]
 {
-  background: #00aaff !important;
+	background: #00aaff !important;
 }
 
 .data.tags span a[href*="\=Web%20Novel"]:hover
 {
-  background: #0077b3 !important;
-  color: white !important;
+	background: #0077b3 !important;
+	color: white !important;
 }
 
 .data.tags span a[href*="\=Light%20Novel"]
 {
-  background: #005580 !important;
+	background: #005580 !important;
 }
 
 .data.tags span a[href*="\=Light%20Novel"]:hover
 {
-  background: #002233 !important;
-  color: white !important;
+	background: #002233 !important;
+	color: white !important;
 }
 
 .data.tags span a[href*="\=Untranslated"]
 {
-  background: #bfbfbf !important;
-  color: black !important;
+	background: #bfbfbf !important;
+	color: black !important;
 }
 
 .data.tags span a[href*="\=Untranslated"]:hover
 {
-  background: #999999 !important;
-  color: black !important;
+	background: #999999 !important;
+	color: black !important;
 }
 
 /* Tag Description */
@@ -241,7 +254,7 @@
 }
 
 .data.tags a[href*="\=%3F"]:after {
-  content: "?\a—————————————————————————————\a Not yet defined.";
+	content: "?\a—————————————————————————————\a Not yet defined.";
 }
 
 .data.tags a[href*="\=Isekai"]:after {
@@ -260,13 +273,13 @@
 }
 .data.tags a[href*="\=Web"]:after
 {
-  content: "Web Novel \a—————————————————————————————\a I'm reading the Web Novel. If Light Novel tag is also present, I'm reading both version.";
+	content: "Web Novel \a—————————————————————————————\a I'm reading the Web Novel. If Light Novel tag is also present, I'm reading both version.";
 }
 .data.tags a[href*="\=Light"]:after
 {
-  content: "Light Novel \a—————————————————————————————\a I'm reading the Light Novel. If Web Novel tag is also present, I'm reading both version.";
+	content: "Light Novel \a—————————————————————————————\a I'm reading the Light Novel. If Web Novel tag is also present, I'm reading both version.";
 }
 .data.tags a[href*="\=Untranslated"]:after
 {
-  content: "Untranslated \a—————————————————————————————\a The translation for this novel has either been dropped, or has not started. I consider it dropped if it didn't receive any update over the 4 last months.";
+	content: "Untranslated \a—————————————————————————————\a The translation for this novel has either been dropped, or has not started. I consider it dropped if it didn't receive any update over the 4 last months.";
 }
