@@ -242,15 +242,15 @@
 /* Tag Description */
 
 .data.tags a[href*="\=Safe"]:after {
-	content: "Rating - For Everyone (Safe)\a—————————————————————————————\a Nothing too shocking here, everyone should be able to read it with no problems."
+	content: "For Everyone (Safe)\a—————————————————————————————\a Nothing too shocking here, everyone should be able to read it with no problems."
 }
 
 .data.tags a[href*="\=Ecchi"]:after {
-	content: "Rating - Ecchi \a—————————————————————————————\a May countain suggestive scenes and/or nudity. \a Mostly fanservice."
+	content: "Ecchi \a—————————————————————————————\a May countain suggestive scenes and/or nudity. \a Mostly fanservice."
 }
 
 .data.tags a[href*="\=18"]:after {
-	content: "Rating - Adult (18+)\a—————————————————————————————\a Sexual and/or Gore content. \a This is certainly not safe for work."
+	content: "Adult (18+)\a—————————————————————————————\a Sexual and/or Gore content. \a This is certainly not safe for work."
 }
 
 .data.tags a[href*="\=%3F"]:after {
@@ -258,16 +258,21 @@
 }
 
 .data.tags a[href*="\=Isekai"]:after {
-	content: "Setting - Isekai \a—————————————————————————————\a The main character(s) have been reincarnated or summoned to another world."
+	content: "Isekai \a—————————————————————————————\a The main character(s) have been reincarnated or summoned to another world."
 }
 
 .data.tags a[href*="\=Supernatural"]:after {
-	content: "Setting - Supernatural \a—————————————————————————————\a The story is happening in our earth, and includes supernatural powers, races or magic."
+	content: "Supernatural \a—————————————————————————————\a The story is happening in our world, and includes supernatural powers, races or magic."
 }
 
 .data.tags a[href*="\=Fantasy"]:after {
-	content: "Setting - Fantasy \a—————————————————————————————\a The story is happening in another world and the main character(s) is native to it."
+	content: "Fantasy \a—————————————————————————————\a The story is happening in another world and the main character(s) is native to it."
 }
+
+.data.tags a[href*="\=Sci-Fi"]:after {
+	content: "Science-Fiction \a—————————————————————————————\a The story is happening in our world, or akin to ours, and involves advanced technology/science."
+}
+
 .data.tags a[href*="\=Romance"]:after {
 	content: "Romance \a—————————————————————————————\a The main character and at least one girl share romantic feelings for each other. \a No one-sided love."
 }
