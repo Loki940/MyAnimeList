@@ -64,7 +64,7 @@
 
 .data.tags span a[href*="\="] {color: white !important; font-family: Quicksand; border-radius: 0 8px 0 8px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.6); }
 .data.tags span a[href*="\=18"], .data.tags span a[href*="\=Ecchi"], .data.tags span a[href*="\=Safe"], .data.tags span a[href*="\=%3F"] {border-radius: 8px 0 8px 0;}
-.data.tags span a[href*="\=Light"],.data.tags span a[href*="\=Web"], .data.tags span a[href*="\=Untranslated"] {border-radius: 8px 8px 0 0;}
+.data.tags span a[href*="\=Light"],.data.tags span a[href*="\=Web"] {border-radius: 8px 8px 0 0;}
 
 .data.tags span a[href*="\=Light"],
 .data.tags span a[href*="\=Web"],
@@ -172,9 +172,9 @@
 }
 
 .data.tags span a[href*="\=Untranslated"]
-`{
+{
 	background: #545454 !important;
-	color: #e2cd41 !important;
+	color: #FFD700 !important;
 }
 
 .data.tags span a[href*="\=Isekai"],
