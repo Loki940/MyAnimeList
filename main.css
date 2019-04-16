@@ -227,18 +227,6 @@
 	color: white !important;
 }
 
-.data.tags span a[href*="\=Untranslated"]
-{
-	background: #bfbfbf !important;
-	color: black !important;
-}
-
-.data.tags span a[href*="\=Untranslated"]:hover
-{
-	background: #999999 !important;
-	color: black !important;
-}
-
 /* Tag Description */
 
 .data.tags a[href*="\=Safe"]:after {
