@@ -1579,7 +1579,7 @@ a, a:hover {
 	z-index: 1;
 }
 
-.status:not(.plantowatch):not(.plantoread) ~ .data.priority { display: none !important; }
+.status ~ .data.priority { display: none !important; }
 
 .list-item:hover .data.priority { opacity: 0; }
 
