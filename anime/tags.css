@@ -1,0 +1,305 @@
+/*Profile Picture*/
+.status-menu:after {
+	background-image: url(https://i.imgur.com/E7xt6Sp.png);
+}
+
+/*Header Text*/
+#cover-image-container:after {
+	content: "Loki940's\a       Anime List";
+}
+
+/*Header Imagine*/
+.cover-block {
+	background-image: url(https://imgur.com/UV2kaRr) !important;
+}
+
+/*Character*/
+#cover-image-container {
+	background-image: none !important;
+}
+
+
+/* Horizontal Tags */
+
+.list-table-data {
+	padding-bottom: 11px;
+}
+
+.data.tags {
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	display: -webkit-flex !important;
+	display: -moz-flex !important;
+	display: flex !important;
+	width: 0;
+	height: 100%;
+	padding: 0 !important;
+	
+	-webkit-align-items: flex-end;
+	-moz-align-items: flex-end;
+	align-items: flex-end;
+}
+.data.tags div {
+	max-width: 980px;
+	margin: 0 0 4px 80px;
+	
+	font-size: 0;
+	white-space: nowrap;
+}
+.data.tags span {
+	display: inline-block;
+	
+	padding: 0;
+}
+.data.tags span a {
+	padding: 1px 8px !important;
+	margin-right: 4px;
+	white-space: nowrap;
+	color: white !important;
+}
+.data.tags span a[href*="\=Favo"] {
+	padding: 0 !important;
+}
+
+/* Tag Grouping */
+
+.data.tags a.edit { right: -1060px; }
+.data.tags textarea { right: -1060px; }
+
+.data.tags span a[href*="\="] {color: white !important;}
+
+.data.tags span a[href*="\=TV"], /*Format*/
+.data.tags span a[href*="\=OVA"],
+.data.tags span a[href*="\=Movie"],
+.data.tags span a[href*="\=Short"],
+
+.data.tags span a[href*="\=G"],/*Fanservice*/
+.data.tags span a[href*="\=PG-12"],
+.data.tags span a[href*="\=R-15"],
+.data.tags span a[href*="\=R-18"],
+.data.tags span a[href*="\=%3F"]
+{
+	padding: 1px 0 !important;
+	width: 50px;
+	color: #262626 !important;
+	background: #bfbfbf;
+}
+
+/*Format*/
+
+.data.tags span a[href*="\="] {
+	border-radius: 1.5px;
+}
+
+.data.tags span a[href*="\=TV"], 
+.data.tags span a[href*="\=OVA"],
+.data.tags span a[href*="\=Movie"],
+.data.tags span a[href*="\=Short"] {
+	border-radius: 1.5px 0 0 1.5px !important;
+	margin-right: 2px;
+}
+
+/*.data.tags span a[href*="\=Paper"],
+.data.tags span a[href*="\=Digit"] {
+	border-radius: 0;
+	margin-right: 2px;
+}*/
+
+/*Fanservice*/
+.data.tags span a[href*="\=G"],
+.data.tags span a[href*="\=PG-12"],
+.data.tags span a[href*="\=R-15"],
+.data.tags span a[href*="\=R-18"],
+.data.tags span a[href*="\=%3F"] {
+	border-radius: 0 1.5px 1.5px 0 !important;
+}
+
+/* Tag Descriptions Basis - Horizontal */
+
+.data.tags span a { position: relative; }
+.data.tags span a:not([href*="\=Favo"]):after, .data.tags span a:not([href*="\=Favo"]):before {
+	position: absolute;
+	
+	display: block;
+	
+	-webkit-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+	pointer-events: none;
+	opacity: 0;
+	z-index: 1;
+}
+.data.tags span a:not([href*="\=Favo"]):after {
+	top: 27px;
+	left: -25px;
+	
+	width: 340px;
+	height: auto;
+	padding: 4px 8px;
+	background: #191919;
+	border: 1px solid #777;
+	border-radius: 4px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	color: #ababab;
+	font: 11px/15px Arial, Verdana;
+	text-align: left;
+	white-space: pre-wrap;
+}
+.data.tags span a:not([href*="\=Favo"]):before {
+	content: "";
+	top: 17px;
+	left: 50%;
+	
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #777 transparent;
+	margin-left: -10px;
+}
+.data.tags span a:hover:after {
+	left: -20px;
+	
+	opacity: 1;
+}
+.data.tags span a:not([href*="\=Favo"]):hover:before {
+	margin-left: -5px;
+	
+	opacity: 1;
+}
+
+.data.tags span:nth-child(n+5) a:not([href*="\=Favo"]):after { left: -105px; }
+.data.tags span:nth-child(n+5) a:hover:after { left: -100px; }
+
+.data.tags span:nth-child(n+8) a:not([href*="\=Favo"]):after { left: auto; right: -115px; }
+.data.tags span:nth-child(n+8) a:hover:after { right: -100px; }
+
+.data.tags span:nth-child(n+11) a:not([href*="\=Favo"]):after { right: -15px; }
+.data.tags span:nth-child(n+11) a:hover:after { right: -20px; }
+
+
+/****************/
+/* TAG COLORING */
+/****************/
+
+.data.tags span a[href*="\=R-18"] 
+{
+	color: #800000 !important;
+}
+	
+.data.tags span a[href*="\=R-18"]:hover
+{
+  background: #4d0000 !important;
+}
+
+/* WORLD */  
+.data.tags span a[href*="\=Isekai"],
+.data.tags span a[href*="\=Fantasy"],
+.data.tags span a[href*="\=Supernatural"] {
+  background: #600080 !important;
+}
+  
+.data.tags span a[href*="\=Isekai"]:hover,
+.data.tags span a[href*="\=Fantasy"]:hover,
+.data.tags span a[href*="\=Supernatural"]:hover {
+  background: #39004d !important;
+  color: white !important;
+}
+
+/* GENRE */
+.data.tags span a[href*="\=Romance"],
+.data.tags span a[href*="\=Love"]
+{
+  background: #cc0066 !important;
+}
+
+.data.tags span a[href*="\=Romance"]:hover,
+.data.tags span a[href*="\=Love"]:hover
+{
+  background: #800040 !important;
+}
+
+.data.tags span a[href*="\=Comedy"] {background: #009999 !important;}
+.data.tags span a[href*="\=Comedy"]:hover {background: #006666 !important; color: white !important;}
+
+.data.tags span a[href*="\=Slice%20of%20Life"] {background: #339966 !important;}
+.data.tags span a[href*="\=Slice%20of%20Life"]:hover {background: #26734d !important; color: white !important;}
+
+/* SOURCE */
+.data.tags span a[href*="\=Light%20Novel"],
+.data.tags span a[href*="\=Manga"],
+.data.tags span a[href*="\=Game"],
+.data.tags span a[href*="\=Original"]
+{
+  background: #0077b3 !important;
+}
+
+.data.tags span a[href*="\=Light%20Novel"]:hover,
+.data.tags span a[href*="\=Manga"]:hover,
+.data.tags span a[href*="\=Game"]:hover,
+.data.tags span a[href*="\=Original"]:hover
+{
+  background: #004466 !important;
+  color: white !important;
+}
+
+.data.tags span a[href*="\=Sexual%20Content"],
+.data.tags span a[href*="\=Incest"]
+{
+	color: #bfbfbf !important;
+	background: #800000 !important;
+}
+
+.data.tags span a[href*="\=Sexual%20Content"]:hover,
+.data.tags span a[href*="\=Incest"]:hover
+{
+	color: #bfbfbf !important;
+	background: #4d0000 !important;
+}
+
+/* SEASONS */
+.data.tags span a[href*="\=Spring"] {background-color: #008000 !important; color: #00e600 !important;}
+.data.tags span a[href*="\=Summer"] {background-color: #007acc !important; color: #4db8ff !important;}
+.data.tags span a[href*="\=Fall"] {background-color: #997a00 !important; color: #e6b800 !important;}
+.data.tags span a[href*="\=Winter"] {background-color: #a3a375 !important; color: #d6d6c2 !important;}
+.data.tags span a[href*="\=Later"] {background-color: #a3a375 !important; color: black !important;}
+
+.data.tags span a[href*="\=Spring"]:hover {background-color: #004d00 !important; color: #00e600 !important;}
+.data.tags span a[href*="\=Summer"]:hover {background-color: #005c99 !important; color: #4db8ff !important;}
+.data.tags span a[href*="\=Fall"]:hover {background-color: #665200 !important; color: #e6b800 !important;}
+.data.tags span a[href*="\=Winter"]:hover {background-color: #8a8a5c !important; color: #d6d6c2 !important;}
+.data.tags span a[href*="\=Later"]:hover {background-color: #a6a6a6 !important; color: black !important;}
+
+
+/****************/
+/* TAG INFOXBOX */
+/****************/
+
+/*.data.tags a[href*="\="]:after {content: " \a—————————————————————————————\a "}*/
+
+/* RATING */
+.data.tags a[href*="\=G"]:after {content: "Rating - G\a—————————————————————————————\a Safe for everyone."}
+.data.tags a[href*="\=PG-12"]:after {content: "Rating - Ecchi \a—————————————————————————————\a May contain suggestive scenes and/or fanservice."}
+.data.tags a[href*="\=R-15"]:after {content: "Rating - Nudity\a—————————————————————————————\a Mature content. Contains nudity, violence and/or anything inappropriate for younger audience."}
+.data.tags a[href*="\=R-18"]:after {content: "Rating - R-18\a—————————————————————————————\a Adult content. Contains adult themes, sexual content, extreme violence and/or illegal themes."}
+.data.tags a[href*="\=%3F"]:after {content: "Rating - ?\a—————————————————————————————\a Not yet defined.";}
+.data.tags a[href*="\=Sexual%20Content"]:after {content: "Sexual Content Warning !\a—————————————————————————————\a If it's not obvious enough by the tag name. This has sexual content. Not safe for work.";}
+
+/* WORLD */
+.data.tags a[href*="\=Isekai"]:after {content: "Setting - Isekai \a—————————————————————————————\a The main character(s) have been reincarnated or summoned to another world.";}
+.data.tags a[href*="\=Supernatural"]:after {content: "Setting - Supernatural \a—————————————————————————————\a The story is happening in our earth, and includes supernatural powers, races or magic."}
+.data.tags a[href*="\=Fantasy"]:after {content: "Setting - Fantasy \a—————————————————————————————\a The story is happening in another world and the main character(s) is native to it."}
+
+/* GENRE */
+.data.tags a[href*="\=Romance"]:after {content: "Romance \a—————————————————————————————\a The main character and at least one other character share romantic feelings for each other. \a No one-sided love."}
+.data.tags a[href*="\=Love"]:after {content: "True Romance \a—————————————————————————————\a The main character engage in a relationship with another character which he share feelings with."}
+.data.tags a[href*="\=Comedy"]:after {content: "Comedy \a—————————————————————————————\a Do I really need to explain what comedy is ?"}
+.data.tags a[href*="\=Slice%20of%20Life"]:after {content: "Slice of Life \a—————————————————————————————\a Follows the main character(s) in their everyday life."}
+.data.tags a[href*="\=Incest"]:after {content: "THIS. HAS. INCEST. PERIOD."}
+
+/* SOURCE */
+.data.tags a[href*="\=Light%20Novel"]:after {content: "Source - Light Novel\a—————————————————————————————\a The source is a Light Novel.";}
+.data.tags a[href*="\=Manga"]:after{content: "Source - Manga\a—————————————————————————————\a The source is a Manga.";}
+.data.tags a[href*="\=Game"]:after{content: "Source - Game\a—————————————————————————————\a The source of this anime is a Game.";}
+.data.tags a[href*="\=Original"]:after{content: "Source - Light Novel\a—————————————————————————————\a This is Original, nor source material.";}
