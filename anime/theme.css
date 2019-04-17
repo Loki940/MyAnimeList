@@ -82,7 +82,7 @@
 
                  /* Button Colours */
           --btn-bg: #ebebeb;
-        --btn-bg-h: #323232;
+        --black: #323232;
    --btn-head-bg-h: #1d439b;
       --btn-text-h: #fff;
 
@@ -910,7 +910,7 @@ a, a:hover {
 	
 	width: 0 !important;
 	height: 26px !important;
-	background: var(--btn-bg-h) !important;
+	background: var(--black) !important;
 	border: none !important;
 	border-radius: 0 13px 13px 0;
 	overflow: hidden;
@@ -1068,7 +1068,7 @@ a, a:hover {
 	display: block;
 	width: 13px;
 	height: 26px;
-	background: var(--btn-bg-h);
+	background: var(--black);
 	border-radius: 13px 0 0 13px;
 	margin-left: -13px;
 	overflow: hidden;
@@ -1373,7 +1373,7 @@ a, a:hover {
 
 .list-table .list-table-data .title .link:hover {
 	color: white !important;
-	background: var(--btn-bg-h);
+	background: var(--black);
 }
 
 .content-status, .rewatching, .rereading {
@@ -1455,7 +1455,7 @@ a, a:hover {
 }
 
 .list-table .list-table-data .score a:not(.edit-disabled):hover {
-	background: var(--btn-bg-h);
+	background: var(--black);
 	
 	color: var(--btn-text-h) !important;
 }
@@ -1469,7 +1469,7 @@ a, a:hover {
 	width: 40px;
 	height: 26px;
 	padding: 0 9px;
-	background: var(--btn-bg-h) url(https://i.imgur.com/KF8oOyC.png) no-repeat 20px center / 16px auto;
+	background: var(--black) url(https://i.imgur.com/KF8oOyC.png) no-repeat 20px center / 16px auto;
 	border: none;
 	border-radius: 13px;
 	box-shadow: none !important;
@@ -1671,7 +1671,7 @@ a, a:hover {
 .list-table .list-table-data .tags span a:hover,
 .list-table .list-table-data .studio span a:hover,
 .list-table .list-table-data .licensor span a:hover {
-	background: var(--btn-bg-h);
+	background: var(--black);
 	
 	color: var(--btn-text-h) !important;
 }
@@ -2244,7 +2244,7 @@ footer {
 
 #advanced-options .advanced-options-button a:hover,
 #advanced-options #fancybox-close:hover {
-	background: var(--btn-bg-h);
+	background: var(--black);
 	
 	color: var(--btn-text-h);
 }
