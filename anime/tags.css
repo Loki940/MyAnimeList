@@ -22,7 +22,7 @@
 /* Horizontal Tags */
 
 .list-table-data {
-	padding-bottom: 11px;
+	padding-bottom: 6px;
 }
 
 .data.tags {
@@ -84,7 +84,13 @@
 	padding: 1px 0 !important;
 	width: 50px;
 	color: #262626 !important;
-	background: #bfbfbf;
+	background: var(--bgs);
+}
+
+.data.tags span a[href*="\="]:hover
+{
+	background: var(--black);
+	color: white !important;
 }
 
 /*Format*/
