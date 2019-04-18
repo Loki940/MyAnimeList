@@ -27,8 +27,8 @@
 
 .data.tags {
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: 70px;
+	bottom: 16px;
 	
 	display: -webkit-flex !important;
 	display: -moz-flex !important;
