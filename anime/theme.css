@@ -1,6 +1,6 @@
 /**
  * "Clarity" by Valerio Lyndon
- * Revision 22.5
+ * Revision 22.6
  * 
  * = TABLE OF CONTENTS =
  * 
@@ -51,7 +51,7 @@
 \*==============================*/
 
 @\import "https://fonts.googleapis.com/css?family=Oswald";
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 
 
 
@@ -71,7 +71,6 @@
              --pbg: #efefef;
               --bg: #fff;
          --bg-dark: #ddd;
-	           --bgs: #F6F6F6;
             --text: #323232;
           --text-h: #787878;
         --text-dim: #bababa;
@@ -82,7 +81,7 @@
 
                  /* Button Colours */
           --btn-bg: #ebebeb;
-        --black: #323232;
+        --btn-bg-h: #323232;
    --btn-head-bg-h: #1d439b;
       --btn-text-h: #fff;
 
@@ -101,8 +100,6 @@
         --cover-bg: #323232;
         --edit-btn: #d9d9d9;
        --checkmark: #9696eb;
-	
-	--shadow: rgba(0,0,0,0.4)
 }
 
 
@@ -663,6 +660,7 @@ a, a:hover {
 	border: none;
 	border-radius: 13px;
 	outline: none;
+	color: var(--text);
 }
 
 #search-box.open input {
@@ -910,7 +908,7 @@ a, a:hover {
 	
 	width: 0 !important;
 	height: 26px !important;
-	background: var(--black) !important;
+	background: var(--btn-bg-h) !important;
 	border: none !important;
 	border-radius: 0 13px 13px 0;
 	overflow: hidden;
@@ -1068,7 +1066,7 @@ a, a:hover {
 	display: block;
 	width: 13px;
 	height: 26px;
-	background: var(--black);
+	background: var(--btn-bg-h);
 	border-radius: 13px 0 0 13px;
 	margin-left: -13px;
 	overflow: hidden;
@@ -1143,7 +1141,6 @@ a, a:hover {
 	background: var(--bg) !important;
 	border: none;
 	margin-bottom: 8px;
-	height: 72px;
 }
 
 .list-table-data {
@@ -1233,7 +1230,7 @@ a, a:hover {
 	left: 0;
 	
 	width: 1px !important;
-	height: 72px;
+	height: 100%;
 	padding: 0 !important;
 }
 
@@ -1256,12 +1253,12 @@ a, a:hover {
 	height: 64px;
 	margin: 4px 0 4px 8px;
 	order: 1;
-	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
 }
 
 .data.image a {
 	position: relative;
 	display: block !important;
+	border-radius: 50%;
 	overflow: hidden;
 }
 
@@ -1270,7 +1267,6 @@ a, a:hover {
 	height: 64px !important;
 	border: none !important;
 	object-fit: cover;
-	
 }
 
 /* External link icon on hover */
@@ -1342,6 +1338,7 @@ a, a:hover {
 	position: relative;
 	
 	width: 142px;
+	height: 16px;
 	padding: 32px 0 0 8px !important;
 	
 	order: 12;
@@ -1350,21 +1347,14 @@ a, a:hover {
 	line-height: 16px;
 }
 
-.data.title.clearfix {
-	top: -16px;
-	/*! max-height: 32px !important; */
-}
-
 .data.title .link.sort {
 	position: absolute;
-	top: 14px;
-	left: 16px;
-	background: var(--bgs);
-	box-shadow: 0 0 2px var(--shadow);
+	top: 16px;
+	left: 8px;
 	
 	display: inline-block;
 	max-width: 100%;
-	padding: 1px 16px 1px 16px;
+	padding-right: 16px;
 	
 	overflow: hidden;
 	box-sizing: border-box;
@@ -1372,42 +1362,27 @@ a, a:hover {
 	line-height: 16px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	font-family: Quicksand;
 }
 
 .list-table .list-table-data .title .link:hover {
-	color: white !important;
-	background: var(--black);
+	color: var(--accent) !important;
 }
 
 .content-status, .rewatching, .rereading {
 	color: var(--text-dim) !important;
-	font-size: 9px !important;
-	position: absolute;
-	top: -12px;
-	right: -114px;
-	width: 60px;
-	text-align: center;
-	border-radius: 1.5px;
-	color: #262626 !important;
-	background: var(--bgs);
-	font-family: Quicksand;
-	border: 0px solid #d9d9d9;
-	box-shadow: 0px 0px 2px var(--shadow);
+	font-size: 10px !important;
 }
+
+.content-status:before, .rewatching:before, .rereading:before { content: "[" }
+.content-status:after, .rewatching:after, .rereading:after { content: "] - " }
+
+
 
 .add-edit-more {
 	display: inline;
 	float: none !important;
-	position: absolute;
-	left: 18px;
-	bottom: -36px;
-  opacity: 0;	
+	
 	color: var(--text-dim);
-}
-
-.list-item:hover .add-edit-more {
-	opacity: 1;
 }
 
 .list-table .list-table-data .title .add-edit-more a { color: var(--text-dim) !important; }
@@ -1418,18 +1393,17 @@ a, a:hover {
 
 .data.type {
 	position: relative;
-	top: 14px;
+	top: -16px;
 	z-index: 1;
-	background: var(--bgs);
-  box-shadow: 0 0 2px var(--shadow);	
-	width: 60px;
+	
+	width: 92px;
 	height: 16px;
-	margin-right: -66px;
-	left: 12px;
+	padding-left: 8px !important;
+	margin-right: -100px;
 	
 	order: 11;
 	
-	text-align: center !important;
+	text-align: left !important;
 	color: var(--text-dim);
 	line-height: 16px;
 	font-size: 10px;
@@ -1445,25 +1419,23 @@ a, a:hover {
 	
 	width: 26px;
 	height: 26px;
-	top: 5px;
 	
 	order: 13;
-	font-family: Quicksand;
 }
 
 .data.score a {
 	display: block;
 	width: 26px;
 	height: 26px;
-	background: var(--bgs);
-	border-radius: 51.5;
+	background: var(--btn-bg);
+	border-radius: 13px;
 	margin: 0 0 0 auto;
-	box-shadow: 0px 0px 2px var(--shadow);
+	
 	line-height: 26px;
 }
 
 .list-table .list-table-data .score a:not(.edit-disabled):hover {
-	background: var(--black);
+	background: var(--btn-bg-h);
 	
 	color: var(--btn-text-h) !important;
 }
@@ -1477,7 +1449,7 @@ a, a:hover {
 	width: 40px;
 	height: 26px;
 	padding: 0 9px;
-	background: var(--black) url(https://i.imgur.com/KF8oOyC.png) no-repeat 20px center / 16px auto;
+	background: var(--btn-bg-h) url(https://i.imgur.com/KF8oOyC.png) no-repeat 20px center / 16px auto;
 	border: none;
 	border-radius: 13px;
 	box-shadow: none !important;
@@ -1514,22 +1486,23 @@ a, a:hover {
 	order: 15;
 }
 
-.data.progress {
-	height: 38px;
-	padding: 2px !important;
-	color: #262626 !important;
-	background: var(--bgs);
-	border: 0.5px solid #d9d9d9;
-	font-family: Quicksand;
-	margin-top: 0px !important;
-	margin: 0 10px 0 10px;
-	box-shadow: 0px 0px 2px var(--shadow);
-}
+.data.chapter { margin-top: -34px; }
+.data.volume { margin: 34px 0 0 -92px; }
 
 .data.progress span, .data.chapter span, .data.volume span { color: var(--text); }
 
 .data.progress:before {
 	content: "Progress:";
+	color: var(--text-dim);
+}
+
+.data.chapter:before {
+	content: "Chapters:";
+	color: var(--text-dim);
+}
+
+.data.volume:before {
+	content: "Volumes:";
 	color: var(--text-dim);
 }
 
@@ -1680,7 +1653,7 @@ a, a:hover {
 .list-table .list-table-data .tags span a:hover,
 .list-table .list-table-data .studio span a:hover,
 .list-table .list-table-data .licensor span a:hover {
-	background: var(--black);
+	background: var(--btn-bg-h);
 	
 	color: var(--btn-text-h) !important;
 }
@@ -2253,7 +2226,7 @@ footer {
 
 #advanced-options .advanced-options-button a:hover,
 #advanced-options #fancybox-close:hover {
-	background: var(--black);
+	background: var(--btn-bg-h);
 	
 	color: var(--btn-text-h);
 }
@@ -2282,3 +2255,100 @@ footer {
 	content: "\f00d  Close";
 	font: 12px/26px Arial, FontAwesome, sans-serif;
 }
+
+/**
+ * "Clarity" by Valerio Lyndon
+ * Dark Mode Modification
+ * Revision 3.2
+ */
+
+/* - - - - - - - - - - - - - - -*\
+  Variables
+\*- - - - - - - - - - - - - - - */
+
+:root {
+                 /* Primary Customization */
+    --banner: url(https://i.imgur.com/WaLokPG.jpg);
+ --character: url(https://i.imgur.com/h8HW1jf.png);
+	
+	              /* Generic Colours */
+             --pbg: #161616;
+              --bg: #212121;
+         --bg-dark: #444;
+            --text: #ababab;
+          --text-h: #416abe;
+        --text-dim: #777;
+      --text-dim-h: #999;
+       --text-dark: #ababab;
+            --icon: #959595;
+          --accent: #416abe;
+
+                 /* Button Colours */
+          --btn-bg: #191919;
+        --btn-bg-h: #ababab;
+   --btn-head-bg-h: #416abe;
+      --btn-text-h: #212121;
+
+                 /* Header Colours */
+      --text-head: #9b9b9b;
+    --text-head-h: #ababab;
+
+                 /* Single-Use Colours */
+        --cover-bg: #090909;
+        --edit-btn: #323232;
+       --checkmark: #416abe;
+}
+
+
+/* - - - - - - - - - - - - - - -*\
+  Non-Variables
+\*- - - - - - - - - - - - - - - */
+
+/* Cover */
+
+.cover-block:before { background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0)); }
+
+#cover-image-container:after {
+	color: #f6f5ff;
+	text-shadow: 2px 2px 8px #e4bef4;
+}
+
+
+/* Shadows */
+
+.status-menu-container:after { background: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0)); }
+
+#footer-block:before { background: linear-gradient(to top,rgba(0,0,0,0.3),rgba(0,0,0,0)); }
+
+/* Nav Buttons */
+.header .header-title,
+.header-info,
+.icon-menu,
+.list-menu-float .icon-menu,
+.stats a,
+.list-table > tbody:first-of-type:after,
+.status-menu:after,
+/* Overlays */
+#advanced-options #fancybox-close,
+#fancybox-outer #fancybox-close,
+#advanced-options .advanced-options-button a
+{ box-shadow: 0px 1px 2px rgba(0,0,0,0.8); }
+
+
+/* List */
+
+.data.score select { background-image: url(https://i.imgur.com/hFijppc.png); }
+
+
+/* Overlays */
+
+#fancybox-overlay { opacity: 0.35 !important; }
+
+#fancybox-outer, #advanced-options { box-shadow: 0 0 32px rgba(0,0,0,0.75); }
+
+#fancybox-frame {
+	-webkit-filter: invert(87.8%) hue-rotate(197deg);
+	filter: invert(87.8%) hue-rotate(197deg);
+}
+
+#advanced-options [class*="-widget"] select { background-image: url(https://i.imgur.com/KF8oOyC.png); }
