@@ -68,21 +68,21 @@
       --character: url(https://i.imgur.com/6IPyngH.png);
 
                  /* Generic Colours */
-             --pbg: #efefef;
-              --bg: #fff;
+             --pbg: #ddd;
+              --bg: #434343;
          --bg-dark: #ddd;
-            --text: #323232;
+            --text: #ddd;
           --text-h: #787878;
         --text-dim: #bababa;
       --text-dim-h: #646464;
        --text-dark: #111;
             --icon: #323232;
-          --accent: #4065ba;
+          --accent: #f1c232;
 
                  /* Button Colours */
           --btn-bg: #ebebeb;
-        --btn-bg-h: #323232;
-   --btn-head-bg-h: #1d439b;
+        --btn-bg-h: #aaa;
+   --btn-head-bg-h: #f1c232;
       --btn-text-h: #fff;
 
                  /* Header Colours */
@@ -1135,7 +1135,7 @@ a, a:hover {
 
 .list-item {
 	position: relative;
-	
+	border-radius: 5px;
 	display: block;
 	width: 100%;
 	background: var(--bg) !important;
@@ -1165,7 +1165,7 @@ a, a:hover {
 	font-size: 11px;
 }
 
-.list-table .list-table-data .data a {
+.data a {
 	color: var(--text) !important;
 	text-decoration: none !important;
 }
@@ -1226,12 +1226,15 @@ a, a:hover {
 
 .data.status {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: -2px;
+	left: -2px;
 	
-	width: 1px !important;
-	height: 100%;
+	width: 20px !important;
+	height: 20px !important;
 	padding: 0 !important;
+	z-index: 1 !important;
+	border-radius: 2px;
+	box-shadow: 0 0 1px #000;
 }
 
 .status.watching,
@@ -1251,20 +1254,21 @@ a, a:hover {
 .data.image {
 	width: 64px;
 	height: 64px;
-	margin: 4px 0 4px 8px;
+	margin: 4px 0 4px 4px;
 	order: 1;
 }
 
 .data.image a {
 	position: relative;
 	display: block !important;
-	border-radius: 50%;
+	border-radius: 5px;
 	overflow: hidden;
+	box-shadow: 0 0 1px #000 !important;;
 }
 
 .data.image img {
 	width: 64px !important;
-	height: 64px !important;
+	height: 75px !important;
 	border: none !important;
 	object-fit: cover;
 }
@@ -1282,7 +1286,7 @@ a, a:hover {
 	background: rgba(0,0,0,0.5);
 	
 	color: #fff;
-	font: 30px/64px FontAwesome;
+	font: 30px/75px FontAwesome;
 	
 	opacity: 0;
 }
@@ -1298,12 +1302,11 @@ a, a:hover {
 
 .data.number {
 	position: relative;
-	top: -22px;
+	top: -28px;
+	left: -10px;
 	
 	width: 20px;
 	height: 20px;
-	background: var(--bg);
-	border-radius: 10px;
 	margin: 0 -28px 0 8px;
 	
 	order: 1;
@@ -1311,7 +1314,8 @@ a, a:hover {
 	line-height: 20px;
 	font-weight: 700;
 	
-	z-index: 1;
+	z-index: 2;
+	/*! background-color: red; */
 }
 
 .list-item:nth-child(n+101) .data.number {
@@ -1392,21 +1396,23 @@ a, a:hover {
 
 
 .data.type {
-	position: relative;
-	top: -16px;
 	z-index: 1;
 	
-	width: 92px;
+	width: auto;
 	height: 16px;
-	padding-left: 8px !important;
-	margin-right: -100px;
+	padding: 0 8px 0 8px !important;
+	border-radius: 2px;
+	margin-left: 8px;
 	
 	order: 11;
 	
-	text-align: left !important;
-	color: var(--text-dim);
+	text-align: center !important;
+	color: var(--bg);
 	line-height: 16px;
 	font-size: 10px;
+	background-color: var(--pbg) !important;
+	text-transform: uppercase !important;
+
 }
 
 
@@ -1416,7 +1422,7 @@ a, a:hover {
 
 .data.score {
 	position: relative;
-	
+	right: 20px;
 	width: 26px;
 	height: 26px;
 	
@@ -1426,18 +1432,19 @@ a, a:hover {
 .data.score a {
 	display: block;
 	width: 26px;
-	height: 26px;
+	height: 36px;
 	background: var(--btn-bg);
-	border-radius: 13px;
+	border-radius: 2px;
 	margin: 0 0 0 auto;
+	color: var(--bg) !important;
 	
-	line-height: 26px;
+	line-height: 36px;
 }
 
 .list-table .list-table-data .score a:not(.edit-disabled):hover {
-	background: var(--btn-bg-h);
+	background: var(--bg);
 	
-	color: var(--btn-text-h) !important;
+	color: var(--accent) !important;
 }
 
 .data.score select {
@@ -1642,7 +1649,6 @@ a, a:hover {
 .data.licensor a {
 	display: block;
 	padding: 1px;
-	background: var(--btn-bg);
 	border-radius: 8.5px;
 	
 	color: var(--text) !important;
@@ -1653,9 +1659,7 @@ a, a:hover {
 .list-table .list-table-data .tags span a:hover,
 .list-table .list-table-data .studio span a:hover,
 .list-table .list-table-data .licensor span a:hover {
-	background: var(--btn-bg-h);
-	
-	color: var(--btn-text-h) !important;
+	color: var(--accent) !important;
 }
 
 /* Empty box message. */
@@ -2255,100 +2259,3 @@ footer {
 	content: "\f00d  Close";
 	font: 12px/26px Arial, FontAwesome, sans-serif;
 }
-
-/**
- * "Clarity" by Valerio Lyndon
- * Dark Mode Modification
- * Revision 3.2
- */
-
-/* - - - - - - - - - - - - - - -*\
-  Variables
-\*- - - - - - - - - - - - - - - */
-
-:root {
-                 /* Primary Customization */
-    --banner: url(https://i.imgur.com/WaLokPG.jpg);
- --character: url(https://i.imgur.com/h8HW1jf.png);
-	
-	              /* Generic Colours */
-             --pbg: #161616;
-              --bg: #212121;
-         --bg-dark: #444;
-            --text: #ababab;
-          --text-h: #416abe;
-        --text-dim: #777;
-      --text-dim-h: #999;
-       --text-dark: #ababab;
-            --icon: #959595;
-          --accent: #416abe;
-
-                 /* Button Colours */
-          --btn-bg: #191919;
-        --btn-bg-h: #ababab;
-   --btn-head-bg-h: #416abe;
-      --btn-text-h: #212121;
-
-                 /* Header Colours */
-      --text-head: #9b9b9b;
-    --text-head-h: #ababab;
-
-                 /* Single-Use Colours */
-        --cover-bg: #090909;
-        --edit-btn: #323232;
-       --checkmark: #416abe;
-}
-
-
-/* - - - - - - - - - - - - - - -*\
-  Non-Variables
-\*- - - - - - - - - - - - - - - */
-
-/* Cover */
-
-.cover-block:before { background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0)); }
-
-#cover-image-container:after {
-	color: #f6f5ff;
-	text-shadow: 2px 2px 8px #e4bef4;
-}
-
-
-/* Shadows */
-
-.status-menu-container:after { background: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0)); }
-
-#footer-block:before { background: linear-gradient(to top,rgba(0,0,0,0.3),rgba(0,0,0,0)); }
-
-/* Nav Buttons */
-.header .header-title,
-.header-info,
-.icon-menu,
-.list-menu-float .icon-menu,
-.stats a,
-.list-table > tbody:first-of-type:after,
-.status-menu:after,
-/* Overlays */
-#advanced-options #fancybox-close,
-#fancybox-outer #fancybox-close,
-#advanced-options .advanced-options-button a
-{ box-shadow: 0px 1px 2px rgba(0,0,0,0.8); }
-
-
-/* List */
-
-.data.score select { background-image: url(https://i.imgur.com/hFijppc.png); }
-
-
-/* Overlays */
-
-#fancybox-overlay { opacity: 0.35 !important; }
-
-#fancybox-outer, #advanced-options { box-shadow: 0 0 32px rgba(0,0,0,0.75); }
-
-#fancybox-frame {
-	-webkit-filter: invert(87.8%) hue-rotate(197deg);
-	filter: invert(87.8%) hue-rotate(197deg);
-}
-
-#advanced-options [class*="-widget"] select { background-image: url(https://i.imgur.com/KF8oOyC.png); }
