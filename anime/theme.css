@@ -1,3 +1,5 @@
+
+
 /**
  * "Clarity" by Valerio Lyndon
  * Revision 22.6
@@ -52,7 +54,7 @@
 
 @\import "https://fonts.googleapis.com/css?family=Oswald";
 
-
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 
 
@@ -69,7 +71,8 @@
 
                  /* Generic Colours */
              --pbg: #ddd;
-              --bg: #434343;
+              --bg: #444;
+	           --bg2: #555;
          --bg-dark: #ddd;
             --text: #ddd;
           --text-h: #787878;
@@ -1229,8 +1232,8 @@ a, a:hover {
 	top: -2px;
 	left: -2px;
 	
-	width: 20px !important;
-	height: 20px !important;
+	width: 10px !important;
+	height: 10px !important;
 	padding: 0 !important;
 	z-index: 1 !important;
 	border-radius: 2px;
@@ -1349,16 +1352,19 @@ a, a:hover {
 	flex: 1 0 auto;
 	
 	line-height: 16px;
+	bottom: 10px;
 }
 
 .data.title .link.sort {
 	position: absolute;
-	top: 16px;
-	left: 8px;
+	top: 20px;
+	left: -56px;
+	background: #555;
 	
 	display: inline-block;
 	max-width: 100%;
-	padding-right: 16px;
+	padding: 2px 16px 2px 62px;
+	border-radius: 3px;
 	
 	overflow: hidden;
 	box-sizing: border-box;
@@ -1373,20 +1379,29 @@ a, a:hover {
 }
 
 .content-status, .rewatching, .rereading {
-	color: var(--text-dim) !important;
+	color: var(--btn-bg) !important;
 	font-size: 10px !important;
+	background: #555;
+	padding: 0px 8px 1px 8px;
+	line-height: 12px;
+	text-align: center !important;
+	position: absolute;
+  top: 3px;
+  border-radius: 3px;
+	left: -54px;
 }
-
-.content-status:before, .rewatching:before, .rereading:before { content: "[" }
-.content-status:after, .rewatching:after, .rereading:after { content: "] - " }
 
 
 
 .add-edit-more {
-	display: inline;
-	float: none !important;
-	
+	position: relative;
+	right: 30px;
+	opacity: 0;
 	color: var(--text-dim);
+}
+
+.list-item:hover .add-edit-more {
+	opacity: 1;
 }
 
 .list-table .list-table-data .title .add-edit-more a { color: var(--text-dim) !important; }
@@ -1398,13 +1413,14 @@ a, a:hover {
 .data.type {
 	z-index: 1;
 	
-	width: auto;
+	width: 38px;
 	height: 16px;
 	padding: 0 8px 0 8px !important;
 	border-radius: 2px;
 	margin-left: 8px;
 	
 	order: 11;
+	margin-bottom: 8px;
 	
 	text-align: center !important;
 	color: var(--bg);
@@ -1433,16 +1449,16 @@ a, a:hover {
 	display: block;
 	width: 26px;
 	height: 36px;
-	background: var(--btn-bg);
+	background: var(--bg2);
 	border-radius: 2px;
 	margin: 0 0 0 auto;
-	color: var(--bg) !important;
+	color: var(--btn-bg) !important;
 	
 	line-height: 36px;
 }
 
 .list-table .list-table-data .score a:not(.edit-disabled):hover {
-	background: var(--bg);
+	background: #333;
 	
 	color: var(--accent) !important;
 }
@@ -1488,9 +1504,13 @@ a, a:hover {
 \*------------------------------*/
 
 .data.progress, .data.chapter, .data.volume {
-	width: 92px;
-	
+	width: 93px;
+	height: 50px;
+	text-align: center;
+	margin-top: 8px !important;
+	margin-right: 10px;
 	order: 15;
+	border-radius: 3px;
 }
 
 .data.chapter { margin-top: -34px; }
@@ -1501,6 +1521,13 @@ a, a:hover {
 .data.progress:before {
 	content: "Progress:";
 	color: var(--text-dim);
+	background-color: #333;
+	display: block;
+	width: inherit;
+	border-radius: 3px;
+	margin-left: -2px;
+	margin-bottom: 6px;
+	padding: 1px 2px 1px 2px;
 }
 
 .data.chapter:before {
@@ -1511,6 +1538,10 @@ a, a:hover {
 .data.volume:before {
 	content: "Volumes:";
 	color: var(--text-dim);
+}
+
+.data.progress {
+	background: var(--bg2);
 }
 
 /* Icon for completed entries. */
@@ -1700,12 +1731,13 @@ a, a:hover {
 
 .data.tags a.edit {
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	top: 45%;
+	margin-right: -20px;
 	
-	width: 5px !important;
-	height: 100% !important;
-	background: var(--edit-btn);
+	width: 8px !important;
+	height: 50% !important;
+	background: #333;
+	border-radius: 0 3px 3px 0;
 	
 	text-align: left !important;
 	font-size: 0 !important;
@@ -1720,6 +1752,7 @@ a, a:hover {
 
 .list-item:hover .data.tags a.edit:hover {
 	width: 25px !important;
+	margin-right: -37px;
 	
 	opacity: 1;
 }
@@ -2268,8 +2301,8 @@ footer {
 
 .data.tags {
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: -12px;
+	bottom: 16px;
 	
 	display: flex !important;
 	width: 0;
@@ -2300,3 +2333,19 @@ footer {
 
 .data.tags a.edit { right: -1060px; }
 .data.tags textarea { right: -1060px; }
+
+.data.tags span a:before {
+	margin-right: 4px;
+	background-color: #333;
+	padding: 2px 7px 2px 7px;
+	border-radius: 2px;
+}
+
+.data.tags span a[href*="\=Later"]:before,
+.data.tags span a[href*="\=Winter"]:before,
+.data.tags span a[href*="\=Fall"]:before,
+.data.tags span a[href*="\=Spring"]:before,
+.data.tags span a[href*="\=Summer"]:before
+{
+	content: "Season";
+}
