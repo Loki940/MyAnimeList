@@ -1,0 +1,291 @@
+/* BACKGROUND */
+
+body {
+background-color: teal;
+}
+
+/* HEADER */
+
+.header {
+background-color: pink;
+}
+
+.header .header-menu {
+/* "Viewing someone's list" */
+background-color: gray;
+}
+
+.header .header-title {
+/* MyAnimeList Logo */
+background-color: green;
+}
+
+/* LIST MENU */
+
+.list-menu-float {
+border: 3px solid red;
+}
+
+.list-menu-float .icon-menu {
+/* All list menu buttons */
+background-color: green;
+}
+
+.list-menu-float .icon-menu.anime-list {
+/* Specific list menu button */
+background-color: blue;
+}
+
+/* LIST CONTAINER */
+
+#list-container {
+background-color: purple;
+}
+
+/* IMAGE BLOCK */
+
+.cover-block {
+background-color: red;
+}
+
+.cover-block #cover-image {
+/* Cover image */
+border: 6px solid green;
+}
+
+.cover-block .image-container .btn-list-setting {
+/* Settings button */
+background-color: yellow;
+}
+
+/* STATUS MENU */
+
+#status-menu {
+background-color: wheat;
+}
+
+#status-menu .status-button {
+/* All status buttons */
+background-color: white;
+}
+
+#status-menu .status-button.watching {
+/* Specific status button */
+background-color: brown;
+}
+
+/* SEARCH */
+
+.status-menu-container .search-container {
+background-color: orange;
+}
+
+/* LIST UNIT */
+
+.list-unit {
+border: 3px solid red;
+}
+
+/* STATUS TITLE */
+
+.list-unit .list-status-title {
+background-color: blue;
+}
+
+/* STATS */
+
+#show-stats-button {
+/* Duh */
+background-color: teal;
+}
+
+#advanced-options-button {
+/* Duh */
+background-color: lime;
+}
+
+.list-unit .list-stats {
+/* Stat bar */
+background-color: orange;
+}
+
+/* LIST TABLE */
+
+/* Sort row */
+
+.list-table .list-table-header {
+border: 3px solid yellow;
+}
+
+.list-table .list-table-header .header-title {
+/* All sort cells */
+background-color: green;
+}
+
+.list-table .list-table-header .header-title.title {
+/* Specific sort cell */
+background-color: orange;
+}
+
+/* Data rows */
+
+.list-table tbody.list-item {
+border: 3px solid pink;
+}
+
+.list-table .list-table-data .data {
+/* All data cells */
+background-color: cyan;
+}
+
+.list-table .list-table-data .data.score {
+/* Specific data cell */
+background-color: wheat;
+}
+
+.list-table .list-table-data .data.title .link {
+/* Anime titles */
+color: magenta;
+}
+
+.add-edit-more {
+background-color: red;
+}
+
+/* LOADING SPACE */
+
+.list-unit .loading-space {
+background-color: blue;
+}
+
+/* FOOTER */
+
+footer {
+background-color: orange;
+}
+
+
+/* MORE SEPARATION FOR INSPECT ELEMENT USERS */
+.list-table .list-table-header .header-title.image {
+background-color: red;
+}
+
+.list-table .list-table-header .header-title.number {
+background-color: aliceblue;
+}
+
+.list-table .list-table-header .header-title.score {
+background-color: purple;
+}
+
+.list-table .list-table-header .header-title.type{
+background-color: orange;
+}
+
+.list-table .list-table-header .header-title.progress{
+background-color: silver;
+}
+
+.list-table .list-table-header .header-title.tags{
+background-color: gold;}
+
+.list-table .list-table-header .header-title.rated{
+background-color: blue;}
+
+.list-table .list-table-header .header-title.started{
+background-color: red;}
+
+
+
+.list-table .list-table-header .header-title.finished{
+background-color: yellow;}
+
+
+.list-table .list-table-header .header-title.days{
+background-color: grey;}
+
+
+.list-table .list-table-header .header-title.storage{
+background-color: white;}
+
+
+.list-table .list-table-header .header-title.priority{
+background-color: orange;}
+
+.list-table .list-table-data .data.number{
+background-color: white;}
+
+.list-table .list-table-data .data.title{
+background-color: orange;}
+
+.list-table .list-table-data .data.type{
+background-color: green;}
+
+.list-table .list-table-data .data.progress{
+background-color: violet;}
+
+.list-table .list-table-data .data.rated{
+background-color: yellow;}
+
+.list-table .list-table-data .data.storage{
+background-color: red;}
+
+.list-table .list-table-data .data.licensor{
+background-color: black;}
+
+.list-table .list-table-data .data.studio{
+background-color: silver;}
+
+.list-table .list-table-data .data.title.clearfix{
+background-color: beige;
+}
+
+#status-menu .status-button.completed{
+background-color: silver;
+}
+
+#status-menu .status-button.onhold{
+background-color: gold;
+}
+
+#status-menu .status-button.dropped{
+background-color: green;
+}
+
+#status-menu .status-button.plantowatch{
+background-color: red;
+}
+
+#status-menu .status-button.all_anime{
+background-color: aquamarine;
+}
+
+.list-menu-float .icon-menu.profile
+
+.list-menu-float .icon-menu.quick-add {
+background:purple !important;}
+
+
+.list-menu-float .icon-menu.anime-list {
+background: teal !important;}
+
+.list-menu-float .icon-menu.manga-list{
+background: cyan !important;}
+
+
+.list-menu-float .icon-menu.history{
+background: yellow !important;}
+
+.list-menu-float .icon-menu.export{
+background: lime !important;}
+
+.list-menu-float .icon-menu.logout{
+background: violet !important;}
+
+.list-menu-float .icon-menu.setting{
+background: orange !important;}
+
+#copyright:after {
+/* Custom copyright text */
+content: "Color-coded starter layout by Shishio-kun & Doomcat55.";
+}
