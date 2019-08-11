@@ -2319,8 +2319,9 @@ footer {
 }
 .data.tags span {
 	display: inline-block;
-	
 	padding: 0;
+	
+	height: 17px; /*fix positioning issues caused by other changes*/
 }
 .data.tags span a {
 	padding: 1px 8px !important;
@@ -2337,15 +2338,44 @@ footer {
 .data.tags span a:before {
 	margin-right: 4px;
 	background-color: #333;
-	padding: 2px 7px 2px 7px;
+	/*padding: 2px 7px 2px 7px;*/
 	border-radius: 2px;
+	display: inline-block;
+	padding: 0; /*no longer required*/
+	color: var(--text) !important; /*prevents text from changing colour on tag hover*/
+	line-height: 17px;
+	pointer-events: none;
 }
 
-.data.tags span a[href*="\=Later"]:before,
-.data.tags span a[href*="\=Winter"]:before,
-.data.tags span a[href*="\=Fall"]:before,
-.data.tags span a[href*="\=Spring"]:before,
-.data.tags span a[href*="\=Summer"]:before
+.data.tags span a[href*="\=Ecchi"],
+.data.tags span a[href*="\=Adult"],
+.data.tags span a[href*="\=Safe"],
+.data.tags span a[href*="\=Isekai"],
+.data.tags span a[href*="\=Fantasy"],
+.data.tags span a[href*="\=Supernatural"],
+.data.tags span a[href*="\=Reality"]
+
 {
-	content: "Season";
+	margin-left: 64px; /*tag width + 4 pixels for removed padding + 4 pixels for added margin*/
+	padding-left: 4px !important; /*change padding to fix hitbox of tag*/
+}
+
+
+.data.tags span a[href*="\=Ecchi"]:before,
+.data.tags span a[href*="\=Adult"]:before,
+.data.tags span a[href*="\=Safe"]:before 
+{
+	content: "Rating";
+	width: 56px;
+	margin-left: -70px; /*tag width + 4 pixels for margin*/
+}
+
+.data.tags span a[href*="\=Isekai"]:before,
+.data.tags span a[href*="\=Fantasy"]:before,
+.data.tags span a[href*="\=Supernatural"]:before,
+.data.tags span a[href*="\=Reality"]:before
+{
+	content: "Setting";
+	width: 56px;
+	margin-left: -70px; /*tag width + 4 pixels for margin*/
 }
