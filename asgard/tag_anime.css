@@ -1,4 +1,4 @@
-.data.tags span a[href*="\=Later"]
+.data.tags span a[href*="\=Later"],
 .data.tags span a[href*="\=Winter"],
 .data.tags span a[href*="\=Fall"],
 .data.tags span a[href*="\=Spring"],
@@ -16,6 +16,23 @@
 	content: "Season";
 	width: 56px;
 	margin-left: -60px; /*tag width + 4 pixels for margin*/
+	text-shadow: none;
+}
+
+.data.tags span a[href*="\=Later"],
+.data.tags span a[href*="\=Winter"],
+.data.tags span a[href*="\=Fall"],
+.data.tags span a[href*="\=Spring"],
+.data.tags span a[href*="\=Summer"] {
+	text-shadow: 0 0 3px var(--accent);
+}
+
+.data.tags span a[href*="\=Later"]:hover,
+.data.tags span a[href*="\=Winter"]:hover,
+.data.tags span a[href*="\=Fall"]:hover,
+.data.tags span a[href*="\=Spring"]:hover,
+.data.tags span a[href*="\=Summer"]:hover {
+	color: var(--accent) !important;
 }
 
 .data.tags span a[href*="\=Light Novel"]:before,
