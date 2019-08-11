@@ -1,0 +1,18 @@
+.data.tags span a[href*="\=Light Novel"],
+.data.tags span a[href*="\=Web Novel"],
+.data.tags span a[href*="\=Manga"]
+
+{
+	margin-left: 64px; /*tag width + 4 pixels for removed padding + 4 pixels for added margin*/
+	padding-left: 4px !important; /*change padding to fix hitbox of tag*/
+}
+
+.data.tags span a[href*="\=Light Novel"]:before,
+.data.tags span a[href*="\=Web Novel"]:before,
+.data.tags span a[href*="\=Manga"]:before 
+{
+	content: "Rating";
+	width: 56px;
+	margin-left: -70px; /*tag width + 4 pixels for margin*/
+}
+
