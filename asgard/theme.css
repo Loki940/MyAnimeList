@@ -66,26 +66,28 @@
                  /* Primary Customization */
            --name: none;
          --avatar: none;
-         --banner: url(https://i.imgur.com/VoPJz2S.jpg);
-      --character: url(https://i.imgur.com/6IPyngH.png);
+         --banner: url(https://i.imgur.com/IitU40e.png);
+      --character: none;
 
                  /* Generic Colours */
-             --pbg: #ddd;
-              --bg: #444;
-	           --bg2: #555;
+             --pbg: #FEFFF7;
+              --bg: #1F375D;
+	       --bglight: #294977;
+	        --bgdark: #16263F;
          --bg-dark: #ddd;
             --text: #ddd;
+	         --textb: #444;
           --text-h: #787878;
         --text-dim: #bababa;
       --text-dim-h: #646464;
        --text-dark: #111;
             --icon: #323232;
-          --accent: #f1c232;
+          --accent: #09AEF0;
 
                  /* Button Colours */
           --btn-bg: #ebebeb;
         --btn-bg-h: #aaa;
-   --btn-head-bg-h: #f1c232;
+   --btn-head-bg-h: #09AEF0;
       --btn-text-h: #fff;
 
                  /* Header Colours */
@@ -1359,7 +1361,7 @@ a, a:hover {
 	position: absolute;
 	top: 20px;
 	left: -56px;
-	background: #555;
+	background: var(--bglight);
 	
 	display: inline-block;
 	max-width: 100%;
@@ -1378,10 +1380,13 @@ a, a:hover {
 	color: var(--accent) !important;
 }
 
+.data.title .link.sort:hover {background: var(--bgdark);}
+.list-item:hover {background: rgb(21, 45, 83) !important;}
+
 .content-status, .rewatching, .rereading {
 	color: var(--btn-bg) !important;
 	font-size: 10px !important;
-	background: #555;
+	background: var(--bgdark);
 	padding: 0px 8px 1px 8px;
 	line-height: 12px;
 	text-align: center !important;
@@ -1449,7 +1454,7 @@ a, a:hover {
 	display: block;
 	width: 26px;
 	height: 36px;
-	background: var(--bg2);
+	background: var(--bglight);
 	border-radius: 2px;
 	margin: 0 0 0 auto;
 	color: var(--btn-bg) !important;
@@ -1458,7 +1463,7 @@ a, a:hover {
 }
 
 .list-table .list-table-data .score a:not(.edit-disabled):hover {
-	background: #333;
+	background: var(--bgdark);
 	
 	color: var(--accent) !important;
 }
@@ -1513,15 +1518,13 @@ a, a:hover {
 	border-radius: 3px;
 }
 
-.data.chapter { margin-top: -34px; }
-.data.volume { margin: 34px 0 0 -92px; }
 
 .data.progress span, .data.chapter span, .data.volume span { color: var(--text); }
 
 .data.progress:before {
 	content: "Progress:";
 	color: var(--text-dim);
-	background-color: #333;
+	background-color: var(--bgdark);
 	display: block;
 	width: inherit;
 	border-radius: 3px;
@@ -1533,15 +1536,29 @@ a, a:hover {
 .data.chapter:before {
 	content: "Chapters:";
 	color: var(--text-dim);
+	background-color: var(--bgdark);
+	display: block;
+	width: inherit;
+	border-radius: 3px;
+	margin-left: -2px;
+	margin-bottom: 6px;
+	padding: 1px 2px 1px 2px;
 }
 
 .data.volume:before {
 	content: "Volumes:";
 	color: var(--text-dim);
+	background-color: var(--bgdark);
+	display: block;
+	width: inherit;
+	border-radius: 3px;
+	margin-left: -2px;
+	margin-bottom: 6px;
+	padding: 1px 2px 1px 2px;
 }
 
-.data.progress {
-	background: var(--bg2);
+.data.progress, .data.chapter, .data.volume {
+	background: var(--bglight);
 }
 
 /* Icon for completed entries. */
@@ -1736,7 +1753,7 @@ a, a:hover {
 	
 	width: 8px !important;
 	height: 50% !important;
-	background: #333;
+	background: var(--bgdark);
 	border-radius: 0 3px 3px 0;
 	
 	text-align: left !important;
@@ -2337,12 +2354,12 @@ footer {
 
 .data.tags span a:before {
 	margin-right: 4px;
-	background-color: #333;
+	background-color: var(--pbg);
 	/*padding: 2px 7px 2px 7px;*/
 	border-radius: 2px;
 	display: inline-block;
 	padding: 0; /*no longer required*/
-	color: var(--text) !important; /*prevents text from changing colour on tag hover*/
+	color: var(--textb) !important; /*prevents text from changing colour on tag hover*/
 	line-height: 17px;
 	pointer-events: none;
 }
@@ -2367,7 +2384,22 @@ footer {
 {
 	content: "Rating";
 	width: 56px;
-	margin-left: -70px; /*tag width + 4 pixels for margin*/
+	margin-left: -60px; /*tag width + 4 pixels for margin*/
+	text-shadow: none;
+}
+
+.data.tags span a[href*="\=Ecchi"],
+.data.tags span a[href*="\=Adult"],
+.data.tags span a[href*="\=Safe"]
+{
+  text-shadow: 0 0 3px #cc0000;
+}
+
+.data.tags span a[href*="\=Ecchi"]:hover,
+.data.tags span a[href*="\=Adult"]:hover,
+.data.tags span a[href*="\=Safe"]:hover
+{
+  color: #cc0000 !important;
 }
 
 .data.tags span a[href*="\=Isekai"]:before,
@@ -2377,5 +2409,22 @@ footer {
 {
 	content: "Genre";
 	width: 56px;
-	margin-left: -70px; /*tag width + 4 pixels for margin*/
+	margin-left: -60px; /*tag width + 4 pixels for margin*/
+	text-shadow: none;
+}
+
+.data.tags span a[href*="\=Isekai"],
+.data.tags span a[href*="\=Fantasy"],
+.data.tags span a[href*="\=Supernatural"],
+.data.tags span a[href*="\=Modern"]
+{
+  text-shadow: 0 0 3px #009933;
+}
+
+.data.tags span a[href*="\=Isekai"]:hover,
+.data.tags span a[href*="\=Fantasy"]:hover,
+.data.tags span a[href*="\=Supernatural"]:hover,
+.data.tags span a[href*="\=Modern"]:hover
+{
+	color: #009933 !important;
 }
