@@ -2373,9 +2373,9 @@ footer {
 .data.tags span a[href*="\=Isekai"]:before,
 .data.tags span a[href*="\=Fantasy"]:before,
 .data.tags span a[href*="\=Supernatural"]:before,
-.data.tags span a[href*="\=Reality"]:before
+.data.tags span a[href*="\=Modern"]:before
 {
-	content: "Setting";
+	content: "Genre";
 	width: 56px;
 	margin-left: -70px; /*tag width + 4 pixels for margin*/
 }
