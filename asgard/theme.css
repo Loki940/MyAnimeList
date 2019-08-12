@@ -2370,7 +2370,7 @@ footer {
 .data.tags span a[href*="\=Isekai"],
 .data.tags span a[href*="\=Fantasy"],
 .data.tags span a[href*="\=Supernatural"],
-.data.tags span a[href*="\=Reality"]
+.data.tags span a[href*="\=Modern"]
 
 {
 	margin-left: 64px; /*tag width + 4 pixels for removed padding + 4 pixels for added margin*/
@@ -2416,7 +2416,8 @@ footer {
 .data.tags span a[href*="\=Isekai"],
 .data.tags span a[href*="\=Fantasy"],
 .data.tags span a[href*="\=Supernatural"],
-.data.tags span a[href*="\=Modern"]
+.data.tags span a[href*="\=Modern"],
+.data.tags span a[href*="\=Romance"]
 {
   text-shadow: 0 0 3px #009933;
 }
@@ -2424,7 +2425,8 @@ footer {
 .data.tags span a[href*="\=Isekai"]:hover,
 .data.tags span a[href*="\=Fantasy"]:hover,
 .data.tags span a[href*="\=Supernatural"]:hover,
-.data.tags span a[href*="\=Modern"]:hover
+.data.tags span a[href*="\=Modern"]:hover,
+.data.tags span a[href*="\=Romance"]:hover
 {
 	color: #009933 !important;
 }
