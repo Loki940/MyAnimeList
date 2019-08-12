@@ -2,7 +2,11 @@
 .data.tags span a[href*="\=Winter"],
 .data.tags span a[href*="\=Fall"],
 .data.tags span a[href*="\=Spring"],
-.data.tags span a[href*="\=Summer"]
+.data.tags span a[href*="\=Summer"],
+.data.tags span a[href*="\=Light%20Novel"],
+.data.tags span a[href*="\=Manga"],
+.data.tags span a[href*="\=Original"],
+.data.tags span a[href*="\=Other"]
 {
 	margin-left: 64px; /*tag width + 4 pixels for removed padding + 4 pixels for added margin*/
 	padding-left: 4px !important; /*change padding to fix hitbox of tag*/
@@ -35,7 +39,7 @@
 	color: var(--accent) !important;
 }
 
-.data.tags span a[href*="\=Light Novel"]:before,
+.data.tags span a[href*="\=Light%20Novel"]:before,
 .data.tags span a[href*="\=Manga"]:before,
 .data.tags span a[href*="\=Original"]:before,
 .data.tags span a[href*="\=Other"]:before
@@ -43,4 +47,21 @@
 	content: "Source";
 	width: 56px;
 	margin-left: -60px; /*tag width + 4 pixels for margin*/
+	text-shadow: none;
+}
+
+.data.tags span a[href*="\=Light%20Novel"],
+.data.tags span a[href*="\=Manga"],
+.data.tags span a[href*="\=Original"],
+.data.tags span a[href*="\=Other"]
+{
+	text-shadow: 0 0 3px #cc9900;
+}
+
+.data.tags span a[href*="\=Light%20Nove"]:hover,
+.data.tags span a[href*="\=Manga"]:hover,
+.data.tags span a[href*="\=Original"]:hover,
+.data.tags span a[href*="\=Other"]:hover
+{
+	color: #cc9900 !important;
 }
