@@ -1176,7 +1176,7 @@ a, a:hover {
 }
 
 .list-table .list-table-data a:not(.edit-disabled):hover {
-	color: var(--text-h) !important;
+	color: var(--accent) !important;
 }
 
 
@@ -1410,7 +1410,7 @@ a, a:hover {
 }
 
 .list-table .list-table-data .title .add-edit-more a { color: var(--text-dim) !important; }
-.list-table .list-table-data .title .add-edit-more a:hover { color: var(--text-dim-h) !important; }
+.list-table .list-table-data .title .add-edit-more a:hover { color: var(--accent) !important; }
 
 .icon-watch { display: none !important; }
 
