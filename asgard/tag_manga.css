@@ -1,5 +1,5 @@
-.data.tags span a[href*="\=Light Novel"],
-.data.tags span a[href*="\=Web Novel"],
+.data.tags span a[href*="\=Light%20Novel"],
+.data.tags span a[href*="\=Web%20Novel"],
 .data.tags span a[href*="\=Manga"]
 
 {
@@ -7,12 +7,26 @@
 	padding-left: 4px !important; /*change padding to fix hitbox of tag*/
 }
 
-.data.tags span a[href*="\=Light Novel"]:before,
-.data.tags span a[href*="\=Web Novel"]:before,
+.data.tags span a[href*="\=Light%20Novel"]:before,
+.data.tags span a[href*="\=Web%20Novel"]:before,
 .data.tags span a[href*="\=Manga"]:before 
 {
-	content: "Rating";
+	content: "Type";
 	width: 56px;
-	margin-left: -70px; /*tag width + 4 pixels for margin*/
+	margin-left: -60px; /*tag width + 4 pixels for margin*/
+	text-shadow: none;
 }
 
+.data.tags span a[href*="\=Light%20Novel"],
+.data.tags span a[href*="\=Web%20Novel"],
+.data.tags span a[href*="\=Manga"]
+{
+	text-shadow: 0 0 3px #cc9900;
+}
+
+.data.tags span a[href*="\=Light%20Novel"]:hover,
+.data.tags span a[href*="\=Web%20Novel"]:hover,
+.data.tags span a[href*="\=Manga"]:hover
+{
+	color: #cc9900 !important;
+}
