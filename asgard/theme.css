@@ -2350,7 +2350,7 @@ footer {
 }
 
 .data.tags a.edit { right: -1060px; }
-.data.tags textarea { right: -1060px; }
+.data.tags textarea { right: -1060px; color: var(--accent);}
 
 .data.tags span a:before {
 	margin-right: 4px;
