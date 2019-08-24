@@ -2370,7 +2370,8 @@ footer {
 .data.tags span a[href*="\=Isekai"],
 .data.tags span a[href*="\=Fantasy"],
 .data.tags span a[href*="\=Supernatural"],
-.data.tags span a[href*="\=Modern"]
+.data.tags span a[href*="\=Modern"],
+.data.tags span a[href*="\=Sci%2DFi"]
 
 {
 	margin-left: 64px; /*tag width + 4 pixels for removed padding + 4 pixels for added margin*/
@@ -2405,7 +2406,8 @@ footer {
 .data.tags span a[href*="\=Isekai"]:before,
 .data.tags span a[href*="\=Fantasy"]:before,
 .data.tags span a[href*="\=Supernatural"]:before,
-.data.tags span a[href*="\=Modern"]:before
+.data.tags span a[href*="\=Modern"]:before,
+.data.tags span a[href*="\=Sci%2DFi"]:before
 {
 	content: "Genre";
 	width: 56px;
@@ -2417,6 +2419,7 @@ footer {
 .data.tags span a[href*="\=Fantasy"],
 .data.tags span a[href*="\=Supernatural"],
 .data.tags span a[href*="\=Modern"],
+.data.tags span a[href*="\=Sci%2DFi"],
 .data.tags span a[href*="\=Romance"]
 {
   text-shadow: 0 0 3px #009933;
@@ -2426,6 +2429,7 @@ footer {
 .data.tags span a[href*="\=Fantasy"]:hover,
 .data.tags span a[href*="\=Supernatural"]:hover,
 .data.tags span a[href*="\=Modern"]:hover,
+.data.tags span a[href*="\=Sci%2DFi"]:hover,
 .data.tags span a[href*="\=Romance"]:hover
 {
 	color: #009933 !important;
